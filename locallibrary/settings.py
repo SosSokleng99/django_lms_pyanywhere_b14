@@ -90,14 +90,21 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2', # use PostgreSQL engine setting
+#         'NAME': 'lms_batch14', # Database Name
+#         'USER': 'postgres', # UserName
+#         'PASSWORD': 'admin123',
+#         'HOST': 'localhost', 
+#         'PORT': '5432', # Database PORT
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # use PostgreSQL engine setting
-        'NAME': 'lms_batch14', # Database Name
-        'USER': 'postgres', # UserName
-        'PASSWORD': 'admin123',
-        'HOST': 'localhost', 
-        'PORT': '5432', # Database PORT
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
